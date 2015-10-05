@@ -3,7 +3,7 @@
 
   App.PagableApi = Ember.Mixin.create({
     pageOffset: 0,
-    pageItemCount: App.DEFAULT_LIMIT,
+    pageItemCount: 5,
     gotoPage: function (pageNumber, startIndex, endIndex) {
       this.setProperties({
         pageOffset: startIndex,
