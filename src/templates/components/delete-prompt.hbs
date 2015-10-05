@@ -1,0 +1,14 @@
+<div class="modal">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h4 class="modal-title">Warning</h4>
+      </div>
+      <div class="modal-body">{{yield}}</div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" {{action "dismiss"}}>Cancel</button>
+        <button type="button" class="btn btn-danger" {{action "accept"}}>Delete</button>
+      </div>
+    </div>
+  </div>
+</div>
