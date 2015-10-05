@@ -1,0 +1,31 @@
+{{#paginated-table tableClass="sample-table" currentPage=currentPage pageItemCount=pageItemCount totalItems=totalItems gotoPage="gotoPage"}}
+  <thead>
+    <tr>
+      {{x-table-col-head class="id-column sample-table-id" label="ID" search="searchById" searchQuery=idSearchQuery}}
+      {{x-table-col-head class="text-column sample-table-name" label="Name" search="searchByName" searchQuery=nameSearchQuery filters=nameFilters}}
+      {{x-table-col-head class="date-column sample-table-date" label="Date" search="searchByDate" searchQuery=dateSearchQuery filters=dateFilters}}
+      <th class="actions-column sample-table-actions"></th>
+    </tr>
+  </thead>
+  <tbody>
+    {{#if loading}}
+      <tr>
+        <td colspan="7" class="text-center">
+          {{x-spinner}}
+        </td>
+      </tr>
+    {{else if content}}
+      {{sample-table-row created="addItem"}}
+      
+      {{#each content as |item|}}
+        {{sample-table-row content=item deleted="removeItem"}}
+      {{/each}}
+    {{else}}
+      <tr>
+        <td colspan="7">
+          {{#x-warn class="block" alert=true}}There is no data available{{/x-warn}}
+        </td>
+      </tr>
+    {{/if}}
+  </tbody>
+{{/paginated-table}}

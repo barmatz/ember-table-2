@@ -1,0 +1,24 @@
+{{#table-editable-row submitting=submitting editing=editing error=error content=content deletableItemLabel=name add="add" remove="remove" edit="edit" approve="approve" cancel="cancel"}}
+  <td>
+    {{#if id}}
+      {{id}}
+    {{else}}
+      <span class="text-muted">New</span>
+    {{/if}}
+  </td>
+  <td>
+    {{#if editableField}}
+      {{input class="form-control" value=name placeholder="input a name.."}}
+    {{else}}
+      {{name}}
+    {{/if}}
+  </td>
+  
+  <td>
+    {{#if editableField}}
+      {{date-picker value=date placeholder="select date.."}}
+    {{else}}
+      {{literal-date date}}
+    {{/if}}
+  </td>
+{{/table-editable-row}}

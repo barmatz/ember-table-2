@@ -1,0 +1,26 @@
+<div class="dropdown">
+  {{label}}
+  <button class="btn btn-link dropdown-toggle" data-toggle="dropdown"><i class="fa fa-caret-down {{if indicator "text-primary" "text-muted"}}"></i></button>
+  <ul class="dropdown-menu">
+    <li>
+      <form class="form table-col-head-form" {{action "search" on="submit"}}>
+        <div class="form-group">
+          {{input class="form-control" value=searchQuery placeholder="search.." tabindex="1"}}
+        </div>
+        {{#if proxyFilters}}
+          <div class="form-group scrollable-group">
+            {{#each proxyFilters as |filter|}}
+              <div class="checkbox">
+                <label>{{input type="checkbox" name="options" checked=filter.checked}} {{filter.label}}</label>
+              </div>
+            {{/each}}
+          </div>
+        {{/if}}
+        <div class="form-footer text-right">
+          <button class="btn btn-xs btn-link" {{action "submit"}}><i class="fa fa-check"></i> apply</button>
+          <button class="btn btn-xs btn-link" {{action "reset"}}><span class="text-muted"><i class="fa fa-times"></i> reset</span></button>
+        </div>
+      </form>       
+    </li>
+  </ul>
+</div>

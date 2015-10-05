@@ -1,0 +1,30 @@
+<div class="pagination-control clearfix">
+  <div class="pull-left metadata">
+    Total results: {{totalItems}}
+  </div>
+  <div class="pull-right">
+    <ul class="pagination">
+      {{#if hasMoreThanOnePage}}
+        <li><a href="#" {{action "gotoPrevPage"}}><i class="fa fa-angle-left"></i></a></li>
+      {{/if}}
+
+      {{#if displayFirstPageOption}}  
+        <li><a href="#" {{action "gotoFirstPage"}}>1</a></li>  
+        <li class="disabled"><a>...</a></li>  
+      {{/if}}
+
+      {{#each visiblePageNumbers as |page|}}
+        <li class="{{if page.active "active"}}"><a href="#" {{action "gotoPage" page.value}}>{{page.value}}</a></li>  
+      {{/each}}
+
+      {{#if displayLastPageOption}}  
+        <li class="disabled"><a>...</a></li>  
+        <li><a href="#" {{action "gotoLastPage"}}>{{totalPages}}</a></li>  
+      {{/if}}
+      
+      {{#if hasMoreThanOnePage}}
+        <li><a href="#" {{action "gotoNextPage"}}><i class="fa fa-angle-right"></i></a></li>
+      {{/if}}
+    </ul>
+  </div>
+</div>

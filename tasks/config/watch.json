@@ -12,7 +12,7 @@
     "tasks": [ "scripts" ]
   },
   "stylesheets": {
-    "files": [ "./src/style/**/{*,.*}.scss", "./.scsslintrc" ],
+    "files": [ "./src/styles/**/{*,.*}.scss", "./.scsslintrc" ],
     "tasks": [ "styles" ]
   },
   "templates": {

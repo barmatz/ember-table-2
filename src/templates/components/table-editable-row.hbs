@@ -1,0 +1,37 @@
+{{#if promptDelete}}
+  <tr>
+    {{#delete-prompt hidden="rejectDelete" dismiss="rejectDelete" accept="acceptDelete"}}
+      <p>
+        You are about to delete <strong>{{deletableItemLabel}}</strong>.
+        Are you sure you want to do this?
+      </p>
+    {{/delete-prompt}}
+  </tr>
+{{/if}}
+
+<tr>
+  {{#if submitting}}
+    <td class="text-center" colspan="1000">{{x-spinner}}</td>
+  {{else}}
+    {{yield}}
+    <td class="text-right">
+      {{#unless content}}
+        {{add-button action="add" class="btn-xs"}}
+      {{else if editing}}
+        {{approve-button action="approve" class="btn-xs"}}
+        {{cancel-button action="cancel" class="btn-xs"}}
+      {{else}}
+        {{edit-button action="edit" class="btn-xs"}}
+        {{remove-button action="remove" class="btn-xs"}}
+      {{/unless}}
+      
+    </td>
+  {{/if}}
+</tr>
+{{#if error}}
+  <tr>
+    <td class="text-center" colspan="1000">
+      {{#x-error alert=true}}{{{error}}}{{/x-error}}
+    </td>
+  </tr>
+{{/if}}

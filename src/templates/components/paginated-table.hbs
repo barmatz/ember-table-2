@@ -1,0 +1,7 @@
+<div class="text-right">
+  {{pagination-control currentPage=currentPage itemsPerPage=pageItemCount totalItems=totalItems pageOptionRange=pageOptionRange change="gotoPage"}}
+</div>
+
+{{#x-table class=tableClass}}
+  {{yield}}
+{{/x-table}}

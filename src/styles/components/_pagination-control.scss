@@ -1,0 +1,22 @@
+.pagination-control {
+  margin: 23px 0;
+
+  .pagination {
+    margin: 0;
+
+    .disabled {
+      a,
+      a:hover,
+      a:focus,
+      span,
+      span:hover,
+      span:focus {
+        cursor: inherit;
+      }
+    }
+  }
+
+  .metadata {
+    padding-top: 0.6em; 
+  }
+}

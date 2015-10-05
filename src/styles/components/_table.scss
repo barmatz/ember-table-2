@@ -1,0 +1,32 @@
+.table {
+  .id-column {
+    min-width: 2em;
+    width: 10%;
+  }
+
+  .text-column {
+    min-width: 20%;
+    width: auto;
+  }
+
+  .date-column {
+    width: 20%;
+  }
+  
+  .actions-column {
+    width: 5em;
+  }
+
+  .dropdown {
+    .dropdown-toggle {
+      &.btn {
+        padding: 1px;
+      }
+    }
+  }
+}
+
+.table-col-head-form {
+  padding: 0.5em 1em;
+  font-weight: normal;
+}

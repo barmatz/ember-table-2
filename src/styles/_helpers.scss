@@ -1,0 +1,9 @@
+.block {
+  display: block;
+
+  span {
+    &.alert {
+      display: block;
+    }
+  }
+}

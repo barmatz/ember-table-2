@@ -12,7 +12,11 @@
         "./src/scripts/routes/**/*.js",
         "./src/scripts/controllers/**/*.js",
         "./src/scripts/views/**/*.js",
+        "./src/scripts/components/**/x-indicator.js",
         "./src/scripts/components/**/x-*.js",
+        "./src/scripts/components/default-button.js",
+        "./src/scripts/components/primary-button.js",
+        "./src/scripts/components/table-row.js",
         "./src/scripts/components/**/*.js",
         "./src/scripts/helpers/**/*.js",
         "./src/scripts/**/*.js"
