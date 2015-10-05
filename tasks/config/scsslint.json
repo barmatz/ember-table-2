@@ -1,0 +1,6 @@
+{
+  "options": {
+    "config": "./.scsslintrc"
+  },
+  "all": [ "./src/styles/**/*.scss" ]
+}

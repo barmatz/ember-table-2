@@ -1,0 +1,10 @@
+{
+  "options": {
+    "sourceMap": true
+  },
+  "all": {
+    "files": {
+      "./public/styles/app.min.css": "./public/styles/app.css"
+    }
+  }
+}
