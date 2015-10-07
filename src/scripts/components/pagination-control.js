@@ -54,12 +54,12 @@
         , pages = []
         , page;
 
-      if (current < min) {
+      if (current < Math.max(min, range)) {
         start = 1;
       } else if (current > max) {
         start = max;
       } else {
-        start = current - 2;
+        start = current - min + 1;
       }
 
       while (pages.length < Math.min(range, total)) {
@@ -85,7 +85,7 @@
         , totalPages = this.get('totalPages')
         , pageOptionRange = this.get('pageOptionRange');
 
-      return (totalPages > pageOptionRange) && (currentPage >= (pageOptionRange - 1));
+      return (totalPages > pageOptionRange) && (currentPage >= pageOptionRange);
     }),
     displayLastPageOption: Ember.computed('currentPage', 'totalPages', 'pageOptionRange', function () {
       var currentPage = this.get('currentPage')
